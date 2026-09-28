@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ur" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="XYZ123..." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNC Cutting & Vector Design Studio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .active-tab {
+            background-color: #2563eb;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 bg-slate-800/95 backdrop-blur-md border-b border-slate-700 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-vector-square text-blue-500 text-2xl"></i>
+                <span class="text-xl font-bold tracking-wide text-white">CNC<span class="text-blue-500">VectorStudio</span></span>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-slate-300 font-medium">
+                <a href="#gallery" class="hover:text-blue-400 transition">CNC Designs</a>
+                <a href="#upload-section" class="hover:text-blue-400 transition">Upload Design</a>
+                <a href="#contact" class="hover:text-blue-400 transition">Custom Order</a>
+            </nav>
+            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition text-sm flex items-center gap-2">
+                <i class="fa-brands fa-whatsapp"></i> Order On WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 text-center px-4 bg-gradient-to-b from-slate-800 to-slate-900 border-b border-slate-800">
+        <span class="bg-blue-900/50 text-blue-400 border border-blue-700/50 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+            Laser Cut & Jali CNC Cutting
+        </span>
+        <h1 class="text-3xl md:text-5xl font-extrabold text-white mt-4 mb-4">
+            Professional <span class="text-blue-500">CNC Cutting & Jali</span> Designs
+        </h1>
+        <p class="text-slate-400 max-w-2xl mx-auto text-base md:text-lg mb-8">
+            Metal Laser Cutting, MDF Jali Patterns, CNC Gates, Elevation Sheets aur Vector DXF/CDR designs banwayein.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#gallery" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition flex items-center justify-center gap-2">
+                <i class="fa-solid fa-grip"></i> Designs Dekhein
+            </a>
+            <a href="#upload-section" class="bg-slate-700 hover:bg-slate-600 text-white px-8 py-3 rounded-lg font-semibold transition flex items-center justify-center gap-2">
+                <i class="fa-solid fa-cloud-arrow-up"></i> Naya Design Upload Karein
+            </a>
+        </div>
+    </section>
+
+    <!-- Design Gallery Section -->
+    <section id="gallery" class="max-w-7xl mx-auto px-4 py-16">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold mb-3">CNC Design Collection</h2>
+            <p class="text-slate-400">Apna pasandida design select karein aur order dene ke liye click karein.</p>
+            
+            <!-- Category Filter Buttons -->
+            <div class="flex justify-center flex-wrap gap-2 mt-6">
+                <button onclick="filterGallery('all', event)" class="tab-btn active-tab px-4 py-2 rounded-full border border-slate-700 text-sm font-medium transition">All CNC Designs</button>
+                <button onclick="filterGallery('jali', event)" class="tab-btn px-4 py-2 rounded-full border border-slate-700 text-sm font-medium transition">2D Jali Patterns</button>
+                <button onclick="filterGallery('metal', event)" class="tab-btn px-4 py-2 rounded-full border border-slate-700 text-sm font-medium transition">Metal Laser Cutting</button>
+                <button onclick="filterGallery('gate', event)" class="tab-btn px-4 py-2 rounded-full border border-slate-700 text-sm font-medium transition">Gate & Door Designs</button>
+            </div>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="gallery-grid">
+            
+            <!-- Card 1 -->
+            <div class="card jali bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-blue-500 transition group">
+                <div class="h-52 bg-slate-700 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Islamic Jali Pattern" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <span class="absolute top-3 left-3 bg-blue-600 text-xs px-2.5 py-1 rounded-full font-semibold">2D Jali Pattern</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Modern Islamic Geometric Jali</h3>
+                    <p class="text-slate-400 text-sm mb-4">Suitable for MDF, Acrylic, Sheet Metal (Thickness: 3mm to 18mm).</p>
+                    <button onclick="sendWhatsAppOrder('Modern Islamic Geometric Jali')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 rounded-lg font-semibold flex items-center justify-center gap-2 transition">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Send Order on WhatsApp
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card metal bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-blue-500 transition group">
+                <div class="h-52 bg-slate-700 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600" alt="Metal Laser Cutting" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <span class="absolute top-3 left-3 bg-emerald-600 text-xs px-2.5 py-1 rounded-full font-semibold">Metal Laser Cut</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Laser Cut Boundary Elevation Sheet</h3>
+                    <p class="text-slate-400 text-sm mb-4">High precision DXF/CDR file for Iron & Stainless Steel sheet cutting.</p>
+                    <button onclick="sendWhatsAppOrder('Laser Cut Boundary Elevation Sheet')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 rounded-lg font-semibold flex items-center justify-center gap-2 transition">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Send Order on WhatsApp
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card gate bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-blue-500 transition group">
+                <div class="h-52 bg-slate-700 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Main Gate Design" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <span class="absolute top-3 left-3 bg-purple-600 text-xs px-2.5 py-1 rounded-full font-semibold">Gate & Door Pattern</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Modern Main Gate CNC Sheet Design</h3>
+                    <p class="text-slate-400 text-sm mb-4">Complete Vector layout for heavy iron gate fabrication.</p>
+                    <button onclick="sendWhatsAppOrder('Modern Main Gate CNC Sheet Design')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 rounded-lg font-semibold flex items-center justify-center gap-2 transition">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Send Order on WhatsApp
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section id="upload-section" class="max-w-4xl mx-auto px-4 py-12">
+        <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700">
+            <div class="text-center mb-6">
+                <h2 class="text-2xl font-bold text-white mb-2">Naya CNC Design Upload Karein</h2>
+                <p class="text-slate-400 text-sm">Aap yahan se website par naye CNC designs add kar sakte hain.</p>
+            </div>
+
+            <form id="uploadForm" onsubmit="handleUploadSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-1">Design Title / Name *</label>
+                    <input type="text" id="uploadTitle" required placeholder="e.g. 3D MDF Wall Jali Design" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-1">Category *</label>
+                        <select id="uploadCategory" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500">
+                            <option value="jali">2D Jali Pattern</option>
+                            <option value="metal">Metal Laser Cut</option>
+                            <option value="gate">Gate & Door Design</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-1">Design Image *</label>
+                        <input type="file" id="uploadImage" accept="image/*" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-slate-300 text-sm focus:outline-none focus:border-blue-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-1">Design Details (Material / Thickness)</label>
+                    <input type="text" id="uploadDetails" placeholder="e.g. Suitable for 12mm MDF / 3mm Iron Sheet" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500">
+                </div>
+
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-plus"></i> Design Gallery Mein Add Karein
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Custom CNC Order Form Section -->
+    <section id="contact" class="max-w-4xl mx-auto px-4 py-16">
+        <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-white mb-2">Custom CNC Order Request</h2>
+                <p class="text-slate-400">Apni sheet ka size aur zarurat fill karke directly WhatsApp par bhejein.</p>
+            </div>
+
+            <form id="customOrderForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Aap Ka Naam *</label>
+                        <input type="text" id="clientName" required placeholder="e.g. Muhammad Ali" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">WhatsApp Number *</label>
+                        <input type="tel" id="clientPhone" required placeholder="03196599019" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">CNC Cutting Type *</label>
+                        <select id="projectCategory" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500">
+                            <option value="2D MDF Jali Cutting">2D MDF / Acrylic Jali Cutting</option>
+                            <option value="Metal Laser Cutting">Metal Laser Cutting (Iron / SS)</option>
+                            <option value="Main Gate / Door Sheet">Main Gate / Door Sheet Cutting</option>
+                            <option value="Custom Vector DXF/CDR">Custom Vector DXF / CDR Design</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Sheet Dimensions & Material</label>
+                        <input type="text" id="sheetDetails" placeholder="e.g. 4x8 ft sheet, 12mm MDF" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">Design Details / Special Instructions</label>
+                    <textarea id="projectDetails" rows="4" placeholder="Aapko jali ka pattern kis tarah ka chahiye? Koi photo ya drawing ho toh batayein..." class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-lg transition text-lg flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i> Send Order Details To WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923196599019?text=Hello!%20Mujhe%20CNC%20Cutting%20aur%20Vector%20Design%20ke%20hawale%20se%20baat%20karni%20hai." target="_blank" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-lg transition z-50">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // WhatsApp Phone Number Updated
+        const MY_WHATSAPP_NUMBER = "923196599019"; 
+
+        // 1. Send Order via WhatsApp for Gallery Items
+        function sendWhatsAppOrder(designTitle) {
+            const message = `Hello! Main aapki website par "${designTitle}" ka CNC design dekha hai. Mujhe is design ki cutting / vector file banwani hai. Baraye meherbani rates aur details batayein.`;
+            const whatsappUrl = `https://wa.me/${MY_WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // 2. Custom Order Form Submission
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('clientName').value;
+            const phone = document.getElementById('clientPhone').value;
+            const category = document.getElementById('projectCategory').value;
+            const sheet = document.getElementById('sheetDetails').value;
+            const details = document.getElementById('projectDetails').value;
+
+            const message = `*New CNC Design Request:*
+--------------------------------
+*Naam:* ${name}
+*Phone:* ${phone}
+*Cutting Type:* ${category}
+*Sheet Size / Material:* ${sheet}
+*Details:* ${details}`;
+
+            const whatsappUrl = `https://wa.me/${MY_WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // 3. Category Filter
+        function filterGallery(category, event) {
+            const cards = document.querySelectorAll('.card');
+            const buttons = document.querySelectorAll('.tab-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active-tab'));
+            if(event) event.target.classList.add('active-tab');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // 4. Handle Design Upload
+        function handleUploadSubmit(e) {
+            e.preventDefault();
+
+            const title = document.getElementById('uploadTitle').value;
+            const category = document.getElementById('uploadCategory').value;
+            const details = document.getElementById('uploadDetails').value || "Custom CNC Vector Design";
+            const imageInput = document.getElementById('uploadImage');
+
+            if (imageInput.files && imageInput.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const imageUrl = e.target.result;
+                    
+                    // Create New Card Dynamic HTML
+                    const galleryGrid = document.getElementById('gallery-grid');
+                    const newCard = document.createElement('div');
+                    
+                    let categoryBadge = "2D Jali Pattern";
+                    let badgeColor = "bg-blue-600";
+                    if(category === 'metal') { categoryBadge = "Metal Laser Cut"; badgeColor = "bg-emerald-600"; }
+                    if(category === 'gate') { categoryBadge = "Gate & Door Pattern"; badgeColor = "bg-purple-600"; }
+
+                    newCard.className = `card ${category} bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-blue-500 transition group`;
+                    newCard.innerHTML = `
+                        <div class="h-52 bg-slate-700 overflow-hidden relative">
+                            <img src="${imageUrl}" alt="${title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <span class="absolute top-3 left-3 ${badgeColor} text-xs px-2.5 py-1 rounded-full font-semibold">${categoryBadge}</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">${title}</h3>
+                            <p class="text-slate-400 text-sm mb-4">${details}</p>
+                            <button onclick="sendWhatsAppOrder('${title}')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 rounded-lg font-semibold flex items-center justify-center gap-2 transition">
+                                <i class="fa-brands fa-whatsapp text-lg"></i> Send Order on WhatsApp
+                            </button>
+                        </div>
+                    `;
+
+                    galleryGrid.prepend(newCard);
+                    document.getElementById('uploadForm').reset();
+                    alert("Design kamyabi se upload ho gaya hai!");
+                    window.location.href = "#gallery";
+                };
+                reader.readAsDataURL(imageInput.files[0]);
+            }
+        }
+    </script>
+</body>
+</html>
